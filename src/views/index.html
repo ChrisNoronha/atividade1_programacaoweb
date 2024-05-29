@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+    <form action="/calculadora/result" method="post">
+        <input type="text" name="num1" placeholder="Primeiro Número" required>
+        <select name="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" name="num2" placeholder="Segundo Número" required>
+        <button type="submit">Calcular</button>
+    </form>
+    <div id="error">
+        <!-- Mensagem de erro será injetada aqui, se existir -->
+        <%= error %>
+    </div>
+</body>
+</html>
